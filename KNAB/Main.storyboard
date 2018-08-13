@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CBh-a9-fVf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Startup View Controller-->
+        <scene sceneID="bhx-6D-3eY">
+            <objects>
+                <viewController id="CBh-a9-fVf" customClass="StartupViewController" customModule="KNAB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hpC-Vt-goV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KNAB " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZL-FO-ZL9">
+                                <rect key="frame" x="95" y="136" width="185" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="60"/>
+                                <color key="textColor" red="0.52019423249999996" green="0.76659089329999996" blue="0.91266590359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQR-bN-huk">
+                                <rect key="frame" x="265" y="136" width="19" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="60"/>
+                                <color key="textColor" red="0.072647266089999996" green="0.19561055299999999" blue="0.23749980330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GZL-FO-ZL9" firstAttribute="centerX" secondItem="s9G-cf-4M3" secondAttribute="centerX" id="3zG-SM-weX"/>
+                            <constraint firstItem="ZQR-bN-huk" firstAttribute="centerY" secondItem="GZL-FO-ZL9" secondAttribute="centerY" id="HBv-NL-xFY"/>
+                            <constraint firstItem="GZL-FO-ZL9" firstAttribute="centerY" secondItem="s9G-cf-4M3" secondAttribute="centerY" multiplier="0.5" id="hkQ-TW-nDc"/>
+                            <constraint firstItem="ZQR-bN-huk" firstAttribute="leading" secondItem="GZL-FO-ZL9" secondAttribute="trailing" constant="-15" id="rzh-Xb-Lh7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s9G-cf-4M3"/>
+                    </view>
+                    <connections>
+                        <segue destination="oAd-rI-HMQ" kind="show" identifier="segueToLogin" animates="NO" id="4qb-dS-chN"/>
+                        <segue destination="NqU-1T-wC9" kind="show" identifier="segueToBudgets" id="Vr4-n9-Vhk"/>
+                        <segue destination="f9q-q9-SI6" kind="show" identifier="segueToBudgetSelector" id="28n-5j-Fyh"/>
+                        <segue destination="ufT-UT-UNW" kind="show" identifier="segueToCategorySelector" id="0FN-1I-uzn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBo-T7-IpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="169"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="lGQ-VG-p44">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="oAd-rI-HMQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ge-se-emT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="53"/>
+        </scene>
+        <!--Budgets-->
+        <scene sceneID="cAw-tb-XDD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Budgets" id="NqU-1T-wC9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39S-X7-G5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="475"/>
+        </scene>
+        <!--BudgetSelector-->
+        <scene sceneID="ene-cs-Y5I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="BudgetSelector" id="f9q-q9-SI6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ja-l0-NL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="121"/>
+        </scene>
+        <!--CategorySelector-->
+        <scene sceneID="mxz-Q9-O1v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="CategorySelector" id="ufT-UT-UNW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cke-Ar-YI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="226"/>
+        </scene>
+    </scenes>
+</document>

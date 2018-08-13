@@ -7,21 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DE339E40BBDF74115508235 /* Pods_KNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */; };
+		875FEA16210EA44A00F42D8E /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875FEA15210EA44A00F42D8E /* Budgets.storyboard */; };
+		879286FF211A7E78007C6B84 /* Milliunits+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */; };
+		87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87928700211A8399007C6B84 /* NewTransactionViewController.swift */; };
+		87B8629F21128E12001181A3 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8629E21128E12001181A3 /* UserDefaults+Extension.swift */; };
 		87DD9934210E962F00618261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD9933210E962F00618261 /* AppDelegate.swift */; };
-		87DD9936210E962F00618261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD9935210E962F00618261 /* ViewController.swift */; };
-		87DD9939210E962F00618261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DD9937210E962F00618261 /* Main.storyboard */; };
+		87DD9939210E962F00618261 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DD9937210E962F00618261 /* Login.storyboard */; };
 		87DD993B210E963200618261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DD993A210E963200618261 /* Assets.xcassets */; };
 		87DD993E210E963200618261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DD993C210E963200618261 /* LaunchScreen.storyboard */; };
+		87DD9946210E969200618261 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD9945210E969200618261 /* LoginViewController.swift */; };
+		87DD9948210E973200618261 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD9947210E973200618261 /* UIColors.swift */; };
+		87DD994A210E9A7300618261 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD9949210E9A7300618261 /* UIView+Extension.swift */; };
+		87DD994D210E9BA200618261 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD994C210E9BA200618261 /* UIViewController+Extension.swift */; };
+		87DD994F210E9E1300618261 /* BudgetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD994E210E9E1300618261 /* BudgetSelectorViewController.swift */; };
+		87DD9951210E9F8700618261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DD9950210E9F8700618261 /* Main.storyboard */; };
+		87DD9953210E9FF000618261 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD9952210E9FF000618261 /* StartupViewController.swift */; };
+		87E4BB272117D56400383C9F /* SpendSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4BB262117D56400383C9F /* SpendSelectorViewController.swift */; };
+		87E4BB292117DA0800383C9F /* SaveSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4BB282117DA0800383C9F /* SaveSelectorViewController.swift */; };
+		87E4BB2B2117DA6B00383C9F /* GiveSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4BB2A2117DA6B00383C9F /* GiveSelectorViewController.swift */; };
+		87E4BB2E2117DF9800383C9F /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4BB2D2117DF9800383C9F /* BudgetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KNAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		875FEA15210EA44A00F42D8E /* Budgets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
+		879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Milliunits+Extension.swift"; sourceTree = "<group>"; };
+		87928700211A8399007C6B84 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
+		87B8629E21128E12001181A3 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		87DD9930210E962F00618261 /* KNAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DD9933210E962F00618261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87DD9935210E962F00618261 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		87DD9938210E962F00618261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87DD9938210E962F00618261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		87DD993A210E963200618261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DD993D210E963200618261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87DD993F210E963200618261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87DD9945210E969200618261 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87DD9947210E973200618261 /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
+		87DD9949210E9A7300618261 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		87DD994C210E9BA200618261 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		87DD994E210E9E1300618261 /* BudgetSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSelectorViewController.swift; sourceTree = "<group>"; };
+		87DD9950210E9F8700618261 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		87DD9952210E9FF000618261 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		87E4BB262117D56400383C9F /* SpendSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendSelectorViewController.swift; sourceTree = "<group>"; };
+		87E4BB282117DA0800383C9F /* SaveSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSelectorViewController.swift; sourceTree = "<group>"; };
+		87E4BB2A2117DA6B00383C9F /* GiveSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveSelectorViewController.swift; sourceTree = "<group>"; };
+		87E4BB2D2117DF9800383C9F /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		E50F57A001707210B0EC93C1 /* Pods-KNAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-KNAB/Pods-KNAB.release.xcconfig"; sourceTree = "<group>"; };
+		F2339DF52C6E29E91DDC05C3 /* Pods-KNAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KNAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KNAB/Pods-KNAB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE339E40BBDF74115508235 /* Pods_KNAB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38859D2EE7341C3BEE90F9CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2339DF52C6E29E91DDC05C3 /* Pods-KNAB.debug.xcconfig */,
+				E50F57A001707210B0EC93C1 /* Pods-KNAB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		87DD9927210E962F00618261 = {
 			isa = PBXGroup;
 			children = (
 				87DD9932210E962F00618261 /* KNAB */,
 				87DD9931210E962F00618261 /* Products */,
+				38859D2EE7341C3BEE90F9CC /* Pods */,
+				A2FECC23FFD5E08C9B223B91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +99,51 @@
 			isa = PBXGroup;
 			children = (
 				87DD9933210E962F00618261 /* AppDelegate.swift */,
-				87DD9935210E962F00618261 /* ViewController.swift */,
-				87DD9937210E962F00618261 /* Main.storyboard */,
+				87DD9950210E9F8700618261 /* Main.storyboard */,
+				87DD9937210E962F00618261 /* Login.storyboard */,
+				875FEA15210EA44A00F42D8E /* Budgets.storyboard */,
+				87DD9952210E9FF000618261 /* StartupViewController.swift */,
+				87DD9945210E969200618261 /* LoginViewController.swift */,
+				87E4BB2D2117DF9800383C9F /* BudgetViewController.swift */,
+				87928700211A8399007C6B84 /* NewTransactionViewController.swift */,
+				87E4BB2C2117DC9100383C9F /* Selection View Controllers */,
+				87DD994B210E9A9000618261 /* Extensions */,
 				87DD993A210E963200618261 /* Assets.xcassets */,
 				87DD993C210E963200618261 /* LaunchScreen.storyboard */,
 				87DD993F210E963200618261 /* Info.plist */,
 			);
 			path = KNAB;
+			sourceTree = "<group>";
+		};
+		87DD994B210E9A9000618261 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */,
+				87DD9947210E973200618261 /* UIColors.swift */,
+				87DD9949210E9A7300618261 /* UIView+Extension.swift */,
+				87DD994C210E9BA200618261 /* UIViewController+Extension.swift */,
+				87B8629E21128E12001181A3 /* UserDefaults+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87E4BB2C2117DC9100383C9F /* Selection View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87DD994E210E9E1300618261 /* BudgetSelectorViewController.swift */,
+				87E4BB262117D56400383C9F /* SpendSelectorViewController.swift */,
+				87E4BB282117DA0800383C9F /* SaveSelectorViewController.swift */,
+				87E4BB2A2117DA6B00383C9F /* GiveSelectorViewController.swift */,
+			);
+			path = "Selection View Controllers";
+			sourceTree = "<group>";
+		};
+		A2FECC23FFD5E08C9B223B91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87DD9942210E963200618261 /* Build configuration list for PBXNativeTarget "KNAB" */;
 			buildPhases = (
+				1B9480516F13DE79D1246E15 /* [CP] Check Pods Manifest.lock */,
 				87DD992C210E962F00618261 /* Sources */,
 				87DD992D210E962F00618261 /* Frameworks */,
 				87DD992E210E962F00618261 /* Resources */,
+				998AAE888A72700BE5E4BB30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,18 +208,71 @@
 			files = (
 				87DD993E210E963200618261 /* LaunchScreen.storyboard in Resources */,
 				87DD993B210E963200618261 /* Assets.xcassets in Resources */,
-				87DD9939210E962F00618261 /* Main.storyboard in Resources */,
+				87DD9939210E962F00618261 /* Login.storyboard in Resources */,
+				875FEA16210EA44A00F42D8E /* Budgets.storyboard in Resources */,
+				87DD9951210E9F8700618261 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B9480516F13DE79D1246E15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KNAB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		998AAE888A72700BE5E4BB30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KNAB/Pods-KNAB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BudgetKit/BudgetKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BudgetKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNAB/Pods-KNAB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87DD992C210E962F00618261 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DD9936210E962F00618261 /* ViewController.swift in Sources */,
+				879286FF211A7E78007C6B84 /* Milliunits+Extension.swift in Sources */,
+				87DD9946210E969200618261 /* LoginViewController.swift in Sources */,
+				87DD9948210E973200618261 /* UIColors.swift in Sources */,
+				87DD9953210E9FF000618261 /* StartupViewController.swift in Sources */,
+				87DD994F210E9E1300618261 /* BudgetSelectorViewController.swift in Sources */,
+				87DD994A210E9A7300618261 /* UIView+Extension.swift in Sources */,
+				87DD994D210E9BA200618261 /* UIViewController+Extension.swift in Sources */,
+				87B8629F21128E12001181A3 /* UserDefaults+Extension.swift in Sources */,
+				87E4BB2E2117DF9800383C9F /* BudgetViewController.swift in Sources */,
+				87E4BB2B2117DA6B00383C9F /* GiveSelectorViewController.swift in Sources */,
+				87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */,
+				87E4BB272117D56400383C9F /* SpendSelectorViewController.swift in Sources */,
+				87E4BB292117DA0800383C9F /* SaveSelectorViewController.swift in Sources */,
 				87DD9934210E962F00618261 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,12 +280,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		87DD9937210E962F00618261 /* Main.storyboard */ = {
+		87DD9937210E962F00618261 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				87DD9938210E962F00618261 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		87DD993C210E963200618261 /* LaunchScreen.storyboard */ = {
@@ -278,9 +415,11 @@
 		};
 		87DD9943210E963200618261 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2339DF52C6E29E91DDC05C3 /* Pods-KNAB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UX6U32S8E5;
 				INFOPLIST_FILE = KNAB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,9 +434,11 @@
 		};
 		87DD9944210E963200618261 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50F57A001707210B0EC93C1 /* Pods-KNAB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UX6U32S8E5;
 				INFOPLIST_FILE = KNAB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
