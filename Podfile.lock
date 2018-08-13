@@ -1,0 +1,16 @@
+PODS:
+  - BudgetKit (0.1.0)
+
+DEPENDENCIES:
+  - BudgetKit (from `~/Development/Projects/CocoaPods/BudgetKit`)
+
+EXTERNAL SOURCES:
+  BudgetKit:
+    :path: "~/Development/Projects/CocoaPods/BudgetKit"
+
+SPEC CHECKSUMS:
+  BudgetKit: 51baa595a66ac32d2595ee38075ee2c659992025
+
+PODFILE CHECKSUM: 87180321c6cfa166fc5204cdfc2a4b463a63746d
+
+COCOAPODS: 1.5.2
