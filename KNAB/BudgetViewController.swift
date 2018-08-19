@@ -25,8 +25,8 @@ class BudgetViewController: UIViewController {
     var saveBalance: Milliunits = 0
     var giveBalance: Milliunits = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         getCategoryBalances {
             print("Got balances")
         }

@@ -5,5 +5,6 @@ target 'KNAB' do
 
   # Pods for KNAB
   pod 'BudgetKit', :path => '~/Development/Projects/CocoaPods/BudgetKit'
-
+  pod 'EFCountingLabel'
+  
 end

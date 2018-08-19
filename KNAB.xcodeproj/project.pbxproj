@@ -10,6 +10,9 @@
 		2DE339E40BBDF74115508235 /* Pods_KNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */; };
 		87024F8E21211D58002805F2 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */; };
 		87024F90212905F7002805F2 /* KidsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F8F212905F7002805F2 /* KidsCategory.swift */; };
+		87024F93212A1A14002805F2 /* IncomeAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F92212A1A14002805F2 /* IncomeAmountViewController.swift */; };
+		87024F95212A1BAF002805F2 /* AddToCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F94212A1BAF002805F2 /* AddToCategoryViewController.swift */; };
+		87024F99212A3732002805F2 /* NewSpendTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F98212A3732002805F2 /* NewSpendTransactionViewController.swift */; };
 		875FEA16210EA44A00F42D8E /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875FEA15210EA44A00F42D8E /* Budgets.storyboard */; };
 		879286FF211A7E78007C6B84 /* Milliunits+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */; };
 		87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87928700211A8399007C6B84 /* NewTransactionViewController.swift */; };
@@ -35,6 +38,9 @@
 		0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KNAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		87024F8F212905F7002805F2 /* KidsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCategory.swift; sourceTree = "<group>"; };
+		87024F92212A1A14002805F2 /* IncomeAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAmountViewController.swift; sourceTree = "<group>"; };
+		87024F94212A1BAF002805F2 /* AddToCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCategoryViewController.swift; sourceTree = "<group>"; };
+		87024F98212A3732002805F2 /* NewSpendTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpendTransactionViewController.swift; sourceTree = "<group>"; };
 		875FEA15210EA44A00F42D8E /* Budgets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
 		879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Milliunits+Extension.swift"; sourceTree = "<group>"; };
 		87928700211A8399007C6B84 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +91,18 @@
 			isa = PBXGroup;
 			children = (
 				87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */,
+				87024F98212A3732002805F2 /* NewSpendTransactionViewController.swift */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		87024F91212A19F7002805F2 /* IncomeTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				87024F92212A1A14002805F2 /* IncomeAmountViewController.swift */,
+				87024F94212A1BAF002805F2 /* AddToCategoryViewController.swift */,
+			);
+			path = IncomeTransaction;
 			sourceTree = "<group>";
 		};
 		87DD9927210E962F00618261 = {
@@ -119,6 +135,7 @@
 				87E4BB2D2117DF9800383C9F /* BudgetViewController.swift */,
 				87928700211A8399007C6B84 /* NewTransactionViewController.swift */,
 				87024F8F212905F7002805F2 /* KidsCategory.swift */,
+				87024F91212A19F7002805F2 /* IncomeTransaction */,
 				87024F8C21211D3E002805F2 /* Transactions */,
 				87E4BB2C2117DC9100383C9F /* Selection View Controllers */,
 				87DD994B210E9A9000618261 /* Extensions */,
@@ -172,6 +189,7 @@
 				87DD992D210E962F00618261 /* Frameworks */,
 				87DD992E210E962F00618261 /* Resources */,
 				998AAE888A72700BE5E4BB30 /* [CP] Embed Pods Frameworks */,
+				94C1DF763D7DC15FC57E5368 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +267,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		94C1DF763D7DC15FC57E5368 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNAB/Pods-KNAB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		998AAE888A72700BE5E4BB30 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,10 +290,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-KNAB/Pods-KNAB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BudgetKit/BudgetKit.framework",
+				"${BUILT_PRODUCTS_DIR}/EFCountingLabel/EFCountingLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BudgetKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFCountingLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -287,9 +322,12 @@
 				87E4BB2E2117DF9800383C9F /* BudgetViewController.swift in Sources */,
 				87E4BB2B2117DA6B00383C9F /* GiveSelectorViewController.swift in Sources */,
 				87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */,
+				87024F93212A1A14002805F2 /* IncomeAmountViewController.swift in Sources */,
+				87024F95212A1BAF002805F2 /* AddToCategoryViewController.swift in Sources */,
 				87E4BB272117D56400383C9F /* SpendSelectorViewController.swift in Sources */,
 				87E4BB292117DA0800383C9F /* SaveSelectorViewController.swift in Sources */,
 				87DD9934210E962F00618261 /* AppDelegate.swift in Sources */,
+				87024F99212A3732002805F2 /* NewSpendTransactionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
