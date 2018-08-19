@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DE339E40BBDF74115508235 /* Pods_KNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */; };
 		87024F8E21211D58002805F2 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */; };
+		87024F90212905F7002805F2 /* KidsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F8F212905F7002805F2 /* KidsCategory.swift */; };
 		875FEA16210EA44A00F42D8E /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875FEA15210EA44A00F42D8E /* Budgets.storyboard */; };
 		879286FF211A7E78007C6B84 /* Milliunits+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */; };
 		87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87928700211A8399007C6B84 /* NewTransactionViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KNAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
+		87024F8F212905F7002805F2 /* KidsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCategory.swift; sourceTree = "<group>"; };
 		875FEA15210EA44A00F42D8E /* Budgets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
 		879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Milliunits+Extension.swift"; sourceTree = "<group>"; };
 		87928700211A8399007C6B84 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				87DD9945210E969200618261 /* LoginViewController.swift */,
 				87E4BB2D2117DF9800383C9F /* BudgetViewController.swift */,
 				87928700211A8399007C6B84 /* NewTransactionViewController.swift */,
+				87024F8F212905F7002805F2 /* KidsCategory.swift */,
 				87024F8C21211D3E002805F2 /* Transactions */,
 				87E4BB2C2117DC9100383C9F /* Selection View Controllers */,
 				87DD994B210E9A9000618261 /* Extensions */,
@@ -277,6 +280,7 @@
 				87DD9948210E973200618261 /* UIColors.swift in Sources */,
 				87DD9953210E9FF000618261 /* StartupViewController.swift in Sources */,
 				87DD994F210E9E1300618261 /* BudgetSelectorViewController.swift in Sources */,
+				87024F90212905F7002805F2 /* KidsCategory.swift in Sources */,
 				87DD994A210E9A7300618261 /* UIView+Extension.swift in Sources */,
 				87DD994D210E9BA200618261 /* UIViewController+Extension.swift in Sources */,
 				87B8629F21128E12001181A3 /* UserDefaults+Extension.swift in Sources */,

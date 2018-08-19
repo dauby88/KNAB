@@ -11,20 +11,19 @@ import BudgetKit
 
 class TransactionsTableViewController: UITableViewController {
 
-    var categoryID: UUID!
-    var color: UIColor!
-    var categoryTitle: String!
+    var category: KidsCategory!
     
     var transactions = [TransactionDetail]()
     
-    func configure(categoryID: UUID, color: UIColor, categoryTitle: String) {
-        self.categoryID = categoryID
-        self.color = color
-        self.categoryTitle = categoryTitle
+    func configure(category: KidsCategory) {
+        self.category = category
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = category.name
+        tableView.backgroundColor = category.color
+        
         loadTransactions {
             DispatchQueue.main.async {
                 let sections = IndexSet(integer: 0)
@@ -40,7 +39,7 @@ class TransactionsTableViewController: UITableViewController {
             return
         }
         
-        YNAB.getTransactionListForCategory(budgetID: budgetID, categoryID: categoryID) { (result) in
+        YNAB.getTransactionListForCategory(budgetID: budgetID, categoryID: category.selectedID!) { (result) in
             switch result {
             case .success(let transactions):
                 self.transactions = transactions
@@ -57,6 +56,10 @@ class TransactionsTableViewController: UITableViewController {
             let sections = IndexSet(integer: 0)
             self.tableView.reloadSections(sections, with: .automatic)
         }
+    }
+    
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - TableView

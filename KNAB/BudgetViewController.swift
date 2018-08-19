@@ -101,6 +101,11 @@ class BudgetViewController: UIViewController {
             let navController = segue.destination as! UINavigationController
             let destination = navController.viewControllers[0] as! NewTransactionViewController
             destination.delegate = self
+        } else if segue.identifier == "segueToTransactionList" {
+            let navController = segue.destination as! UINavigationController
+            let destination = navController.viewControllers[0] as! TransactionsTableViewController
+            let category = sender as! KidsCategory
+            destination.configure(category: category)            
         }
     }
     
@@ -108,16 +113,16 @@ class BudgetViewController: UIViewController {
         YNAB.logout()
     }
     
-    @IBAction func showSpendingBudget(_ sender: Any) {
-        let transitionDelegate = ExpandingViewTransition(expandingView: spendView, expandViewAnimationDuration: 0.4, presentVCAnimationDuration: 0.1)
-        
-        
-        let vc = TransactionsTableViewController()
-        let categoryID = UserDefaults.selectedSpendCategoryID!
-        vc.configure(categoryID: categoryID, color: .green, categoryTitle: "Spend")
-        vc.transitioningDelegate = transitionDelegate
-        
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func showSpendTransactions(_ sender: Any) {
+        performSegue(withIdentifier: "segueToTransactionList", sender: KidsCategory.spend)
+    }
+    
+    @IBAction func showGiveTransactions(_ sender: Any) {
+        performSegue(withIdentifier: "segueToTransactionList", sender: KidsCategory.give)
+    }
+    
+    @IBAction func showSaveTransactions(_ sender: Any) {
+        performSegue(withIdentifier: "segueToTransactionList", sender: KidsCategory.save)
     }
 }
 
