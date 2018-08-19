@@ -15,14 +15,39 @@ class LoginViewController: UIViewController {
     var redirectURI: String = "com.daubycafe.ynat://oauth2redirect/login"
     var state: String? = nil
     
+    var finishedLogin = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if finishedLogin {
+            let segueIdentifier: String = {
+                let budgetIsSelected = UserDefaults.selectedBudgetID != nil
+                let categoriesAreSelected = UserDefaults.selectedSpendCategoryID != nil && UserDefaults.selectedSaveCategoryID != nil  && UserDefaults.selectedGiveCategoryID != nil
+                
+                if budgetIsSelected {
+                    if categoriesAreSelected {
+                        return "segueToBudgets"
+                    } else {
+                        return "segueToCategorySelector"
+                    }
+                } else {
+                    return "segueToBudgetSelector"
+                }
+            }()
+            
+            performSegue(withIdentifier: segueIdentifier, sender: nil)
+        }
+    }
 
     @IBAction func login(_ sender: Any) {
+
         let authenticated: () -> Void = {
-            self.performSegue(withIdentifier: "segueToBudgetSelector", sender: nil)
+            self.finishedLogin = true
         }
         
         let failed: (Error) -> Void = { error in

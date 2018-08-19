@@ -11,6 +11,10 @@ import BudgetKit
 
 class BudgetViewController: UIViewController {
 
+    @IBOutlet weak var spendView: UIView!
+    @IBOutlet weak var saveView: UIView!
+    @IBOutlet weak var giveView: UIView!
+    
     @IBOutlet weak var spendBalanceLabel: UILabel!
     @IBOutlet weak var saveBalanceLabel: UILabel!
     @IBOutlet weak var giveBalanceLabel: UILabel!
@@ -98,6 +102,22 @@ class BudgetViewController: UIViewController {
             let destination = navController.viewControllers[0] as! NewTransactionViewController
             destination.delegate = self
         }
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        YNAB.logout()
+    }
+    
+    @IBAction func showSpendingBudget(_ sender: Any) {
+        let transitionDelegate = ExpandingViewTransition(expandingView: spendView, expandViewAnimationDuration: 0.4, presentVCAnimationDuration: 0.1)
+        
+        
+        let vc = TransactionsTableViewController()
+        let categoryID = UserDefaults.selectedSpendCategoryID!
+        vc.configure(categoryID: categoryID, color: .green, categoryTitle: "Spend")
+        vc.transitioningDelegate = transitionDelegate
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
