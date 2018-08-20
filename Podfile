@@ -4,7 +4,7 @@ target 'KNAB' do
   use_frameworks!
 
   # Pods for KNAB
-  pod 'BudgetKit', :path => '~/Development/Projects/CocoaPods/BudgetKit'
+  pod 'BudgetKit'
   pod 'EFCountingLabel'
   
 end

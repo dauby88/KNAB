@@ -3,17 +3,13 @@ PODS:
   - EFCountingLabel (4.0.1)
 
 DEPENDENCIES:
-  - BudgetKit (from `~/Development/Projects/CocoaPods/BudgetKit`)
+  - BudgetKit
   - EFCountingLabel
 
-EXTERNAL SOURCES:
-  BudgetKit:
-    :path: ~/Development/Projects/CocoaPods/BudgetKit
-
 SPEC CHECKSUMS:
-  BudgetKit: 51baa595a66ac32d2595ee38075ee2c659992025
+  BudgetKit: 30781423529c49dff52ac4087f7c7ca26cc72420
   EFCountingLabel: 1beb6707761ad00b97efc8bde5c3fceaa7cb9eec
 
-PODFILE CHECKSUM: 2f52a3bf4511ea5c46d81462d18f514aac5bc8d7
+PODFILE CHECKSUM: 333681679a999302251787f4ca37bff920dd0553
 
 COCOAPODS: 1.4.0
