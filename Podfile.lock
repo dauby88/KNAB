@@ -6,10 +6,15 @@ DEPENDENCIES:
   - BudgetKit
   - EFCountingLabel
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BudgetKit
+    - EFCountingLabel
+
 SPEC CHECKSUMS:
   BudgetKit: 30781423529c49dff52ac4087f7c7ca26cc72420
   EFCountingLabel: 1beb6707761ad00b97efc8bde5c3fceaa7cb9eec
 
 PODFILE CHECKSUM: 333681679a999302251787f4ca37bff920dd0553
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

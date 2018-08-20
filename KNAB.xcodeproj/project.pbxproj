@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174DF4DE212B61A7001B559A /* PrivacyPolicy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174DF4DD212B61A7001B559A /* PrivacyPolicy.storyboard */; };
+		174DF4E0212B6404001B559A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174DF4DF212B6404001B559A /* PrivacyPolicyViewController.swift */; };
 		2DE339E40BBDF74115508235 /* Pods_KNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */; };
 		87024F8E21211D58002805F2 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */; };
 		87024F90212905F7002805F2 /* KidsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F8F212905F7002805F2 /* KidsCategory.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0C0C9B6B9B2E0037419FA9FD /* Pods_KNAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KNAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		174DF4DD212B61A7001B559A /* PrivacyPolicy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicy.storyboard; sourceTree = "<group>"; };
+		174DF4DF212B6404001B559A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		87024F8F212905F7002805F2 /* KidsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCategory.swift; sourceTree = "<group>"; };
 		87024F92212A1A14002805F2 /* IncomeAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAmountViewController.swift; sourceTree = "<group>"; };
@@ -133,11 +137,13 @@
 				87DD9950210E9F8700618261 /* Main.storyboard */,
 				87DD9937210E962F00618261 /* Login.storyboard */,
 				875FEA15210EA44A00F42D8E /* Budgets.storyboard */,
+				174DF4DD212B61A7001B559A /* PrivacyPolicy.storyboard */,
 				87DD9952210E9FF000618261 /* StartupViewController.swift */,
 				87DD9945210E969200618261 /* LoginViewController.swift */,
 				87E4BB2D2117DF9800383C9F /* BudgetViewController.swift */,
 				87928700211A8399007C6B84 /* NewTransactionViewController.swift */,
 				87024F8F212905F7002805F2 /* KidsCategory.swift */,
+				174DF4DF212B6404001B559A /* PrivacyPolicyViewController.swift */,
 				87024F91212A19F7002805F2 /* IncomeTransaction */,
 				87024F8C21211D3E002805F2 /* Transactions */,
 				87E4BB2C2117DC9100383C9F /* Selection View Controllers */,
@@ -192,7 +198,6 @@
 				87DD992D210E962F00618261 /* Frameworks */,
 				87DD992E210E962F00618261 /* Resources */,
 				998AAE888A72700BE5E4BB30 /* [CP] Embed Pods Frameworks */,
-				94C1DF763D7DC15FC57E5368 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +251,7 @@
 				87DD9939210E962F00618261 /* Login.storyboard in Resources */,
 				875FEA16210EA44A00F42D8E /* Budgets.storyboard in Resources */,
 				87DD9951210E9F8700618261 /* Main.storyboard in Resources */,
+				174DF4DE212B61A7001B559A /* PrivacyPolicy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,21 +274,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94C1DF763D7DC15FC57E5368 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KNAB/Pods-KNAB-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		998AAE888A72700BE5E4BB30 /* [CP] Embed Pods Frameworks */ = {
@@ -327,6 +318,7 @@
 				87E4BB2B2117DA6B00383C9F /* GiveSelectorViewController.swift in Sources */,
 				87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */,
 				87024F93212A1A14002805F2 /* IncomeAmountViewController.swift in Sources */,
+				174DF4E0212B6404001B559A /* PrivacyPolicyViewController.swift in Sources */,
 				87024F95212A1BAF002805F2 /* AddToCategoryViewController.swift in Sources */,
 				87E4BB272117D56400383C9F /* SpendSelectorViewController.swift in Sources */,
 				87E4BB292117DA0800383C9F /* SaveSelectorViewController.swift in Sources */,

@@ -47,13 +47,21 @@
                                 <color key="textColor" red="0.072647266089916229" green="0.19561055302619934" blue="0.23749980330467224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ln-he-WtL">
+                                <rect key="frame" x="16" y="629" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="6d5-zI-nXj" kind="presentation" id="6eW-hX-nPP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tf7-d2-Nee" firstAttribute="leading" secondItem="C68-PI-WHW" secondAttribute="trailing" constant="-15" id="8eq-KH-7fg"/>
                             <constraint firstItem="asi-a1-ecx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Ze-8M-18C"/>
                             <constraint firstItem="asi-a1-ecx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="Ewe-26-9UH"/>
+                            <constraint firstItem="8Ln-he-WtL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fgv-uJ-Zvo"/>
                             <constraint firstItem="tf7-d2-Nee" firstAttribute="centerY" secondItem="C68-PI-WHW" secondAttribute="centerY" id="NGZ-9j-0bf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ln-he-WtL" secondAttribute="bottom" constant="16" id="S9n-3D-TQG"/>
                             <constraint firstItem="C68-PI-WHW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="wHk-Pe-Roz"/>
                             <constraint firstItem="C68-PI-WHW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xF8-wX-4ol"/>
                         </constraints>
@@ -272,6 +280,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSg-Kd-CYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2541" y="468"/>
+        </scene>
+        <!--PrivacyPolicy-->
+        <scene sceneID="bur-sZ-Q1N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PrivacyPolicy" id="6d5-zI-nXj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0G-rm-ade" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="461"/>
         </scene>
         <!--CategorySelector-->
         <scene sceneID="jdf-fD-o6b">

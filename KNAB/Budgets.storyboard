@@ -12,6 +12,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PrivacyPolicy-->
+        <scene sceneID="cKG-E4-93f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PrivacyPolicy" id="ejW-b0-lkn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yd-eR-B2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2540" y="610"/>
+        </scene>
         <!--Budget View Controller-->
         <scene sceneID="0qm-oU-cCq">
             <objects>
@@ -144,6 +152,12 @@
                                     <segue destination="toW-VJ-9st" kind="presentation" identifier="segueToNewTransaction" id="aTy-wN-1ty"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdQ-sY-lqA">
+                                <rect key="frame" x="16" y="629" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="ejW-b0-lkn" kind="presentation" id="B9Y-7T-iXg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -161,6 +175,8 @@
                             <constraint firstItem="yB1-VM-Kqa" firstAttribute="height" secondItem="cZa-kg-TJo" secondAttribute="height" multiplier="0.25" id="hz0-Wd-6Zq"/>
                             <constraint firstItem="Czw-Zg-yXZ" firstAttribute="leading" secondItem="kaL-9J-zzw" secondAttribute="leading" constant="16" id="iiS-Vj-nbO"/>
                             <constraint firstItem="Czw-Zg-yXZ" firstAttribute="width" secondItem="cZa-kg-TJo" secondAttribute="width" multiplier="0.7" id="nXk-VP-HLv"/>
+                            <constraint firstItem="pdQ-sY-lqA" firstAttribute="leading" secondItem="kaL-9J-zzw" secondAttribute="leading" constant="16" id="r5r-dx-3H6"/>
+                            <constraint firstItem="kaL-9J-zzw" firstAttribute="bottom" secondItem="pdQ-sY-lqA" secondAttribute="bottom" constant="16" id="vt8-LY-IgU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kaL-9J-zzw"/>
                     </view>
