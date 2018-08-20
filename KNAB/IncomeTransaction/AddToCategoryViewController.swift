@@ -28,7 +28,7 @@ class AddToCategoryViewController: UIViewController {
     var categoryBalance: Milliunits? {
         didSet {
             DispatchQueue.main.async {
-                self.balanceLabel.text = self.categoryBalance?.dollarAmount
+                self.balanceLabel?.text = self.categoryBalance?.dollarAmount
             }
         }
     }
@@ -70,6 +70,20 @@ class AddToCategoryViewController: UIViewController {
 
     @IBAction func transferToCategory(_ sender: Any) {
         guard transferComplete == false else {
+            switch self.category! {
+            case .give:
+                let identifier = "segueToSavingAmount"
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+                    self.performSegue(withIdentifier: identifier, sender: nil)
+                })
+            case .save:
+                let identifier = "segueToSpendingAmount"
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+                    self.performSegue(withIdentifier: identifier, sender: nil)
+                })
+            case .spend:
+                break
+            }
             return
         }
         guard let balance = categoryBalance else {
@@ -103,15 +117,14 @@ class AddToCategoryViewController: UIViewController {
         }
         
         balanceLabel.completionBlock = {
-            var identifier = ""
             switch self.category! {
             case .give:
-                identifier = "segueToSavingAmount"
+                let identifier = "segueToSavingAmount"
                 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
                     self.performSegue(withIdentifier: identifier, sender: nil)
                 })
             case .save:
-                identifier = "segueToSpendingAmount"
+                let identifier = "segueToSpendingAmount"
                 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
                     self.performSegue(withIdentifier: identifier, sender: nil)
                 })
@@ -120,16 +133,37 @@ class AddToCategoryViewController: UIViewController {
                 YNAB.getAccountList(budgetID: budgetID, completion: { (accountResult) in
                     switch accountResult {
                     case .success(let accounts):
-                        let accountID = accounts.first?.id
-                        let date = DateFormatter.ynab.string(from: Date())
-                        let transaction = NewTransaction(accountID: accountID!, date: date, amount: self.totalAmount, payeeID: nil, payeeName: "KNAB Payee", categoryID: nil, memo: nil, status: .uncleared, approved: false, flagColor: nil, importID: nil)
+                        let accountID = accounts.first!.id
+                        let date = DateFormatter.yyyyMMdd.string(from: Date())
+                        
+                        let giveAmount = self.totalAmount / 10
+                        let giveCategory = UserDefaults.selectedGiveCategoryID!
+                        
+                        let spendAmount = self.totalAmount / 20 * 9
+                        let spendCategory = UserDefaults.selectedSpendCategoryID!
+                        
+                        let saveAmount = self.totalAmount / 20 * 9
+                        let saveCategory = UserDefaults.selectedSaveCategoryID!
+
+                        let giveTransaction = NewTransaction(accountID: accountID, date: date, amount: giveAmount, payeeID: nil, payeeName: "KNAB Payee", categoryID: giveCategory, memo: nil, status: .uncleared, approved: true, flagColor: nil, importID: nil)
+                        
+                        let spendTransaction = NewTransaction(accountID: accountID, date: date, amount: spendAmount, payeeID: nil, payeeName: "KNAB Payee", categoryID: spendCategory, memo: nil, status: .uncleared, approved: true, flagColor: nil, importID: nil)
+                        
+                        let saveTransaction = NewTransaction(accountID: accountID, date: date, amount: saveAmount, payeeID: nil, payeeName: "KNAB Payee", categoryID: saveCategory, memo: nil, status: .uncleared, approved: true, flagColor: nil, importID: nil)
+                        
                         let budgetID = UserDefaults.selectedBudgetID!
-                        YNAB.createNewTransaction(transaction, budgetID: budgetID, completion: { (result) in
+                        let transactions = [giveTransaction, spendTransaction, saveTransaction]
+                        YNAB.postBulkTransactions(transactions, budgetID: budgetID, completion: { (result) in
                             switch result {
                             case .success:
                                 self.dismiss(animated: true, completion: nil)
                             case .failure:
-                                self.showErrorAlert(with: "Failed to post new transaction.")
+                                let alert = UIAlertController(title: "Error", message: "Failed to post new transactions.", preferredStyle: .alert)
+                                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
+                                    self.dismiss(animated: true, completion: nil)
+                                })
+                                alert.addAction(okAction)
+                                self.present(alert, animated: true, completion: nil)
                             }
                         })
                     case .failure(_):

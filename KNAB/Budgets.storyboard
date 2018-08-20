@@ -144,24 +144,15 @@
                                     <segue destination="toW-VJ-9st" kind="presentation" identifier="segueToNewTransaction" id="aTy-wN-1ty"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnl-Gz-toB">
-                                <rect key="frame" x="16" y="625" width="22" height="22"/>
-                                <color key="tintColor" red="0.52019423246383667" green="0.76659089326858521" blue="0.91266590356826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="logout:" destination="rbn-Ur-QYP" eventType="touchUpInside" id="2OM-x0-qlr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kaL-9J-zzw" firstAttribute="trailing" secondItem="t0b-NE-Red" secondAttribute="trailing" constant="16" id="06A-mH-o7g"/>
                             <constraint firstItem="kaL-9J-zzw" firstAttribute="trailing" secondItem="yB1-VM-Kqa" secondAttribute="trailing" constant="16" id="0Bi-Om-dav"/>
-                            <constraint firstItem="Vnl-Gz-toB" firstAttribute="leading" secondItem="kaL-9J-zzw" secondAttribute="leading" constant="16" id="3f5-hh-zTG"/>
                             <constraint firstItem="Czw-Zg-yXZ" firstAttribute="height" secondItem="cZa-kg-TJo" secondAttribute="height" multiplier="0.25" id="9BY-hA-fEg"/>
                             <constraint firstItem="yB1-VM-Kqa" firstAttribute="top" secondItem="hk9-E2-5O7" secondAttribute="bottom" constant="8" symbolic="YES" id="AV0-3b-QCu"/>
                             <constraint firstItem="hk9-E2-5O7" firstAttribute="leading" secondItem="kaL-9J-zzw" secondAttribute="leading" constant="16" id="EKA-ma-QOT"/>
                             <constraint firstItem="hk9-E2-5O7" firstAttribute="height" secondItem="cZa-kg-TJo" secondAttribute="height" multiplier="0.25" id="NBO-St-gnH"/>
-                            <constraint firstItem="kaL-9J-zzw" firstAttribute="bottom" secondItem="Vnl-Gz-toB" secondAttribute="bottom" constant="20" id="RGh-yy-MRN"/>
                             <constraint firstItem="yB1-VM-Kqa" firstAttribute="width" secondItem="cZa-kg-TJo" secondAttribute="width" multiplier="0.7" id="V89-g5-6Cl"/>
                             <constraint firstItem="hk9-E2-5O7" firstAttribute="width" secondItem="cZa-kg-TJo" secondAttribute="width" multiplier="0.8" id="XEC-vY-xQh"/>
                             <constraint firstItem="kaL-9J-zzw" firstAttribute="bottom" secondItem="t0b-NE-Red" secondAttribute="bottom" constant="20" id="chT-fS-hoh"/>
@@ -237,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="-426" y="952"/>
         </scene>
-        <!--View Controller-->
+        <!--Spend Or Give Expense View Controller-->
         <scene sceneID="zau-EY-gt0">
             <objects>
-                <viewController id="2Pk-BD-tFY" sceneMemberID="viewController">
+                <viewController id="2Pk-BD-tFY" customClass="SpendOrGiveExpenseViewController" customModule="KNAB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CBm-JW-dVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,12 +328,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jh-dO-rTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="fTo-HF-6sO" userLabel="Spending Tap Gesture Recognizer">
                     <connections>
-                        <segue destination="8tX-WH-YLR" kind="show" id="yIa-IN-qAM"/>
+                        <segue destination="8tX-WH-YLR" kind="show" identifier="segueFromSpendingExpense" id="yIa-IN-qAM"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="44O-tW-4Fp" userLabel="Giving Tap Gesture Recognizer">
                     <connections>
-                        <segue destination="8tX-WH-YLR" kind="show" id="Hok-ya-H5j"/>
+                        <segue destination="8tX-WH-YLR" kind="show" identifier="segueFromGivingExpense" id="Hok-ya-H5j"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -794,11 +785,17 @@
                         <viewLayoutGuide key="safeArea" id="M9y-NF-8Ot"/>
                     </view>
                     <connections>
+                        <outlet property="amountLabel" destination="7ey-b8-KYk" id="a37-gj-3l8"/>
+                        <outlet property="balanceLabel" destination="y2f-gt-9nc" id="Csf-6h-elA"/>
                         <segue destination="X1x-N5-lfm" kind="show" identifier="segueToSpendingAmount" id="ITK-B4-97A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxF-pr-QQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="8g0-IT-3Yf"/>
+                <tapGestureRecognizer id="8g0-IT-3Yf">
+                    <connections>
+                        <action selector="transferToCategory:" destination="DQZ-wI-ldO" id="hb9-Cj-tcc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1728" y="-126"/>
         </scene>
@@ -895,9 +892,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xUB-vq-mW1"/>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="sgO-48-Fhl" id="bPM-zS-rbR"/>
+                        <outlet property="balanceLabel" destination="j5o-NI-xBD" id="zeB-rQ-hHl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klV-Bo-oVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="r6D-yA-nuI"/>
+                <tapGestureRecognizer id="r6D-yA-nuI">
+                    <connections>
+                        <action selector="transferToCategory:" destination="X1x-N5-lfm" id="ziF-GI-c8G"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2412" y="-126.38680659670166"/>
         </scene>
@@ -938,10 +943,10 @@
             </objects>
             <point key="canvasLocation" x="-1210" y="952"/>
         </scene>
-        <!--View Controller-->
+        <!--New Spend Transaction View Controller-->
         <scene sceneID="8Oe-1p-rSG">
             <objects>
-                <viewController id="8tX-WH-YLR" sceneMemberID="viewController">
+                <viewController id="8tX-WH-YLR" customClass="NewSpendTransactionViewController" customModule="KNAB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uLY-BW-kGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -966,6 +971,9 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="incrementAmount:" destination="8tX-WH-YLR" eventType="touchUpInside" id="c0R-T5-uRQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-mq-MpS">
                                 <rect key="frame" x="64" y="291" width="60" height="60"/>
@@ -981,6 +989,9 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="decrementAmount:" destination="8tX-WH-YLR" eventType="touchUpInside" id="v8k-5z-lo3"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="il4-QQ-gGK">
                                 <rect key="frame" x="16" y="587" width="343" height="60"/>
@@ -1037,9 +1048,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t2z-0s-1sb"/>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="1ey-aL-tfU" id="dUn-sJ-P35"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOT-ie-QzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="X6U-dN-hvM"/>
+                <tapGestureRecognizer id="X6U-dN-hvM">
+                    <connections>
+                        <action selector="submitTransaction:" destination="8tX-WH-YLR" id="NQm-wa-j1u"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057" y="564"/>
         </scene>

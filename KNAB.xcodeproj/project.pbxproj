@@ -13,6 +13,7 @@
 		87024F93212A1A14002805F2 /* IncomeAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F92212A1A14002805F2 /* IncomeAmountViewController.swift */; };
 		87024F95212A1BAF002805F2 /* AddToCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F94212A1BAF002805F2 /* AddToCategoryViewController.swift */; };
 		87024F99212A3732002805F2 /* NewSpendTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F98212A3732002805F2 /* NewSpendTransactionViewController.swift */; };
+		87024F9B212A4BED002805F2 /* SpendOrGiveExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87024F9A212A4BED002805F2 /* SpendOrGiveExpenseViewController.swift */; };
 		875FEA16210EA44A00F42D8E /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875FEA15210EA44A00F42D8E /* Budgets.storyboard */; };
 		879286FF211A7E78007C6B84 /* Milliunits+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */; };
 		87928701211A8399007C6B84 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87928700211A8399007C6B84 /* NewTransactionViewController.swift */; };
@@ -41,6 +42,7 @@
 		87024F92212A1A14002805F2 /* IncomeAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAmountViewController.swift; sourceTree = "<group>"; };
 		87024F94212A1BAF002805F2 /* AddToCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCategoryViewController.swift; sourceTree = "<group>"; };
 		87024F98212A3732002805F2 /* NewSpendTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpendTransactionViewController.swift; sourceTree = "<group>"; };
+		87024F9A212A4BED002805F2 /* SpendOrGiveExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendOrGiveExpenseViewController.swift; sourceTree = "<group>"; };
 		875FEA15210EA44A00F42D8E /* Budgets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
 		879286FE211A7E78007C6B84 /* Milliunits+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Milliunits+Extension.swift"; sourceTree = "<group>"; };
 		87928700211A8399007C6B84 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				87024F8D21211D58002805F2 /* TransactionsTableViewController.swift */,
+				87024F9A212A4BED002805F2 /* SpendOrGiveExpenseViewController.swift */,
 				87024F98212A3732002805F2 /* NewSpendTransactionViewController.swift */,
 			);
 			path = Transactions;
@@ -315,6 +318,7 @@
 				87DD9948210E973200618261 /* UIColors.swift in Sources */,
 				87DD9953210E9FF000618261 /* StartupViewController.swift in Sources */,
 				87DD994F210E9E1300618261 /* BudgetSelectorViewController.swift in Sources */,
+				87024F9B212A4BED002805F2 /* SpendOrGiveExpenseViewController.swift in Sources */,
 				87024F90212905F7002805F2 /* KidsCategory.swift in Sources */,
 				87DD994A210E9A7300618261 /* UIView+Extension.swift in Sources */,
 				87DD994D210E9BA200618261 /* UIViewController+Extension.swift in Sources */,
